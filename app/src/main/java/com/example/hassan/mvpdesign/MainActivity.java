@@ -34,10 +34,4 @@ public class MainActivity extends AppCompatActivity implements ButtonView {
         Log.e(TAG, "updateView: "+ message);
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
-    @Override
-    protected void onDestroy() {
-        buttonPresenter.unbind();
-        super.onDestroy();
-    }
 }
