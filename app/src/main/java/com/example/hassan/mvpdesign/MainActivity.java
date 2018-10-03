@@ -14,12 +14,10 @@ public class MainActivity extends AppCompatActivity implements ButtonView {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     ButtonPresenter buttonPresenter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
         // Note: Don't do this on production code, use Dependency Injection instead
         // to provide the BooksInteractor and the BooksPresenter to the View
         // Learn how to use Dagger 2 here:
