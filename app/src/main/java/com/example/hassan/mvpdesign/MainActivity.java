@@ -2,6 +2,7 @@ package com.example.hassan.mvpdesign;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.hassan.mvpdesign.model.ButtonInteractor;
@@ -11,6 +12,7 @@ import com.example.hassan.mvpdesign.view.ButtonView;
 
 public class MainActivity extends AppCompatActivity implements ButtonView {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     ButtonPresenter buttonPresenter;
 
     @Override
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements ButtonView {
 
     @Override
     public void updateView(String message) {
+        Log.e(TAG, "updateView: "+ message);
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
